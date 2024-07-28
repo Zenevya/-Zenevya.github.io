@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>chessboardjs Example #1000 - Empty Board</title>
+  <!-- STUPID MF <base href="../" /> -->
+  <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+</head>
+
+<body>
+<h1>Personified Chess Game Project</h1>
+
+<h2 style="display: inline-block">by </h2>
+<h2 style="display: inline-block"><a href="https://sites.google.com/view/zeynepnyakay/about" target="_blank"> Zeynep N. Yakay</a></h2>
+
+<p>The Personified Chess Piece Animation project aims to bring a unique and engaging twist to the traditional 
+  game of chess by infusing each piece with distinct personalities and creating scenes that play out when pieces 
+  are captured. This project combines elements of storytelling, and game design to create a dynamic and immersive 
+  chess experience.</p>
+
+<!--- Begin Example HTML ------------------------------------------------------>
+<div id="myBoard" style="width: 400px"></div>
+<button id="startBtn">Start Position</button>
+<button id="clearBtn">Clear Board</button>
+<!--- End Example HTML -------------------------------------------------------->
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+<script>
+
+// --- Begin Example JS --------------------------------------------------------
+var board = Chessboard('myBoard', {
+  draggable: true,
+  dropOffBoard: 'trash',
+  sparePieces: true
+})
+
+$('#startBtn').on('click', board.start)
+$('#clearBtn').on('click', board.clear)
+// --- End Example JS ----------------------------------------------------------
+
+</script>
+</body>
+</html>
