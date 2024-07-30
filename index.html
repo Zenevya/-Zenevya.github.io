@@ -9,39 +9,45 @@
 </head>
 
 <body>
-<h1>Personified Chess Game Project</h1>
+<h1>Personified Chess Chronicles</h1>
 
 <h2 style="display: inline-block">by </h2>
 <h2 style="display: inline-block"><a href="https://sites.google.com/view/zeynepnyakay/about" target="_blank"> Zeynep N. Yakay</a></h2>
 
-<p>The Personified Chess Piece Animation project aims to bring a unique and engaging twist to the traditional 
-  game of chess by infusing each piece with distinct personalities and creating scenes that play out when pieces 
-  are captured. This project combines elements of storytelling, and game design to create a dynamic and immersive 
-  chess experience.</p>
+<p>The Personified Chess Chronicles aims to bring a unique and engaging twist to the traditional game of chess 
+  by infusing each piece with distinct personalities and creating scenes that play out when pieces are captured. This project 
+  combines elements of storytelling and game design to create a dynamic and immersive chess experience.</p>
 
-<!--- Begin Example HTML ------------------------------------------------------>
 <div id="myBoard" style="width: 400px; display: inline-block;"></div>
 
+<!--pgn file load button-->
 <div style="display: inline-block; vertical-align: top; margin-left: 20px;">
-  <br><br>
   <h3>Import game</h3>
   <p>Paste a game PGN to get a browsable replay.</p>
   <input type="file" id="pgnUpload" accept=".pgn" style="display: none;">
   <button id="loadPgnBtn">Load PGN file</button>
+
+<!-- Buttons for navigating PGN moves -->
+<div id="pgn-navigation" style="margin-top: 20px;">
+  <div class="chessboard" id="board5" style="margin: 0 auto; width: 400px;"></div>
+    <div style="margin: 5px auto; width: 400px;">
+      <input type="button" id="startPositionBtn5" value="|<" />
+      <input type="button" id="prevBtn5" value="<" />
+      <input type="button" id="nextBtn5" value=">" />
+      <input type="button" id="endPositionBtn5" value=">|" />
+      <p><span id="pgn5"></span></p>
+    </div>
+  </div>
 </div>
 
 <br><br>
 <button id="startBtn">Start Position</button>
 <button id="clearBtn">Clear Board</button>
-<!--- End Example HTML -------------------------------------------------------->
 
+<!-- JavaScript includes -->
 <script src="./chessboardjs-1.0.0/js/jquery-3.7.1.min.js"></script>
-<!-- src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"-->
 <script src="./chessboardjs-1.0.0/js/chessboard-1.0.0.js"></script>
-
-<!--src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"-->
-<!--<script src="./pgn-parser/pgn-parser.js"></script>-->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js"></script>
 <script src="./script.js"></script>
 
 </body>
