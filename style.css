@@ -1,10 +1,89 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     padding: 20px;
 }
 
-#chess-board {
-    margin: 20px auto;
+.main-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: flex-start; /* Ensure content starts from the left */
+}
+
+#chessboard-container {
+    margin-right: 20px; /* Space between chessboard and side content */
+}
+
+#myBoard {
     width: 400px;
+    text-align: left;
+}
+
+#pgnHeaderInfo {
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 0.6; /* Adjust this value for the desired line spacing */
+    text-align: left;
+    margin-left: 10px;
+    max-width: 400px;
+    opacity: 0.7;
+}
+
+#side-content {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column; /* Stack the file loader and history container */
+    width: 400px; /* Set width for side content to match chessboard */
+}
+
+#pgnFileLoader {
+    margin-bottom: 20px; /* Add space between file loader and history */
+    text-align: left;
+}
+
+#pgn-navigation {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#intro-description {
+    max-width: 900px;
+}
+
+#formattedHistoryContainer {
+    width: 380px; /* Match width to side content */
+    height: 260px; /* Set a height that limits the visible area */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+    padding: 10px; /* Optional: Add padding for spacing */
+    background-color: white; /* Optional: Set a background color */
+}
+
+#formattedHistory {
+    font-family: Arial, sans-serif; /* Match the general font */
+    font-size: 14px; /* Set the font size for readability */
+    line-height: 1.4; /* Set line height for better spacing */
+}
+
+.move-number {
+    color: blue;
+}
+
+.highlight {
+    background-color: yellow; 
+}
+
+button {
+    margin-top: 10px;
+}
+
+#pieceImageContainer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#pieceImage {
+    max-width: 100px;
+    max-height: 100px;
 }
